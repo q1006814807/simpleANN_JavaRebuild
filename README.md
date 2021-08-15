@@ -22,7 +22,8 @@
 
 ​		如图所示，主要框架结构为：
 
-![structure](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\structure.jpg)
+
+![structure](https://user-images.githubusercontent.com/73578518/129473951-a4a5db21-4059-4065-8451-6688597616ea.jpg)
 
 - 激活函数模块 Activation
 - 代价（损失）函数模块 CostFunction
@@ -34,7 +35,7 @@
 - 工具模块 Utils
 - 以及数据目录 Data
 
-![image-20210815160512811](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210815160512811.png)
+![image-20210815160512811](https://user-images.githubusercontent.com/73578518/129473956-2dfa9f9f-a8f4-424d-85c5-e14fc5a7d1cd.png)
 
 ## 三、快速开始 Quickstart
 
@@ -65,7 +66,7 @@ IMAGE_SKIP=16
 LABEL_SKIP=8
 ```
 
-![image-20210815160532300](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210815160532300.png)
+![image-20210815160532300](https://user-images.githubusercontent.com/73578518/129473961-1e9f5244-7b6d-441d-8adc-54bcdc8c470c.png)
 
 
 
@@ -117,7 +118,7 @@ public class QuickStart {
 
 测试结果示例：
 
-![image-20210813221951994](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813221951994.png)
+![image-20210813221951994](https://user-images.githubusercontent.com/73578518/129473972-bd5b8b37-5667-4c63-914e-5bc404e7db0e.png)
 
 
 
@@ -129,7 +130,7 @@ public class QuickStart {
 layerBox.save("m1"); // 参数为[模型名称]
 ```
 
-![image-20210813221922091](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813221922091.png)
+![image-20210813221922091](https://user-images.githubusercontent.com/73578518/129473980-bc436ec4-c313-4e8f-a736-3d64e7bde9ff.png)
 
 - 读取模型
 
@@ -141,7 +142,7 @@ layerBox.load("m1", 3); // 参数为[模型名称]，[网络层数]
 
 ## 四、工具模块 Utils
 
-![image-20210813221907658](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813221907658.png)
+![image-20210813221907658](https://user-images.githubusercontent.com/73578518/129473983-78ed4aca-e45f-478d-b80e-9fcc1e2ccaff.png)
 
 
 
@@ -161,7 +162,7 @@ layerBox.load("m1", 3); // 参数为[模型名称]，[网络层数]
 
 ## 五、激活函数模块与自定义激活函数 Activation
 
-![image-20210813221852120](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813221852120.png)
+![image-20210813221852120](https://user-images.githubusercontent.com/73578518/129473991-1f0b235a-e3d7-4b26-91c3-17d3de8966bf.png)
 
 ​	如图所示，激活函数模块由**激活函数Activation接口**以及**其实impl现类**组成（其中**ActivationFactory**是作为序列化的工具，并不重要，可以忽略），因此你可以自由地实现Activation接口从而拓展增加新的激活函数！
 
@@ -213,7 +214,7 @@ public class TanhActivation implements Activation {
 
 ## 六、代价（损失）函数模块 CostFunction
 
-![image-20210815154408855](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210815154408855.png)
+![image-20210815154408855](https://user-images.githubusercontent.com/73578518/129473995-cc9b71b8-46a8-438e-94b8-5b53a9e08e7f.png)
 
 ​	代价（损失）函数模块由**CostFunction**接口、BaseCost基类以及他们的继承与实现类**impl**组成（其中**CostFunctionFactory**也是作为序列化工具，并不重要，可以忽略）
 
@@ -319,7 +320,7 @@ layersBox.setCostFunctionID(0); // 最小二乘法
 
 ## 七、数据加载模块 DataLoader
 
-![image-20210813221833388](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813221833388.png)
+![image-20210813221833388](https://user-images.githubusercontent.com/73578518/129474001-6b4d362b-fe51-4676-b192-518c1e3686d9.png)
 
 缩略代码：
 
@@ -368,17 +369,17 @@ dataLoader.loadTestLabel(); // 获取测试标签数组
 
 ## 八、神经网络层与实体模块 Layer
 
-![image-20210813221647657](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813221647657.png)
+![image-20210813221647657](https://user-images.githubusercontent.com/73578518/129474005-477f9c7f-5bd8-4594-82d2-9aa66af0e41d.png)
 
 - Layer
 
-![image-20210815160954201](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210815160954201.png)
+![image-20210815160954201](https://user-images.githubusercontent.com/73578518/129474010-fa72a627-d964-49cb-b914-807ab77c5b32.png)
 
 ​	其中**InputLayer**、**OutputLayer**继承于**Layer**，对Layer实现了简单的参数封装，其本质没有任何差别，你也可以只使用**Layer**创建网络层结构。**Layer**对象负责该层的结点参数theta、激活函数activation的保存。
 
 - LayersBox
 
-![image-20210815161006948](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210815161006948.png)
+![image-20210815161006948](https://user-images.githubusercontent.com/73578518/129474013-0a1887fb-4619-4f1e-aaa5-82e9cf2ce22f.png)
 
 ​	**LayersBox**集装箱是作为**Layer**的组织管理容器，是一个**神经网络实体**，对外界提供方便的层参数**set、get**方法，并且负责每一层的参数的初始化与梯度下降，相应地负责管理使用哪种代价函数，也负责读取、保存层模型的功能。
 
@@ -386,29 +387,29 @@ dataLoader.loadTestLabel(); // 获取测试标签数组
 
 ## 九、参数容器模块 ParamsContainer
 
-![image-20210813223433686](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813223433686.png)
+![image-20210813223433686](https://user-images.githubusercontent.com/73578518/129474016-49354091-4425-4a12-a6b6-4930ad7ae875.png)
 
 - ProcessParams
 
   fowardPropagate()前向传播的过程参数，主要保存了每一层的A、Z参数
 
-![image-20210813223621045](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813223621045.png)
+![image-20210813223621045](https://user-images.githubusercontent.com/73578518/129474021-ccba2244-74e3-4f3d-b366-c452bf346373.png)
 
 - Gradients
 
   backPropagate()反向传播的过程参数，主要保存了每一层的梯度dθ、代价值cost、是否正确isRight
 
-  ![image-20210813223835563](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813223835563.png)
+![image-20210813223835563](https://user-images.githubusercontent.com/73578518/129474026-eaeb039e-5a3f-45d3-97b5-b69dd50631bc.png)
 
 - BatchGradients
 
   miniBatch训练中用于累积保存每一次训练的Gradients参数，提供cost统计、正确率rightRate统计等方法
 
-![image-20210813224307283](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210813224307283.png)
+![image-20210813224307283](https://user-images.githubusercontent.com/73578518/129474032-2f2ff8ae-29b0-49a3-ac20-8d8496ed30e3.png)
 
 ## 十、神经网络操作模块 ModelController
 
-![image-20210815172150411](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210815172150411.png)
+![image-20210815172150411](https://user-images.githubusercontent.com/73578518/129474038-8c56e856-5dd9-4f2a-a39d-a6745d987acb.png)
 
 ​	神经网络操作模块主要对LayersBox组织管理的神经网络实体进行训练，如果你把以上所有模块都看完了得话，那么神经网络操作模块是一点都不难理解的，因为它只是对以上模块的组合使用而已，每个模块各司其职，分工明确。要理解主模块，需要从一次miniBatch训练周期的过程开始着手：
 
@@ -491,11 +492,11 @@ void trainForEpochWithAllTrainingData(float learningRate, int batchSize)
 
 ## 十一、公式推导补充
 
-![img](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\c19757b0f18c0a94bcdfee2c6c57be57.png)
+![c19757b0f18c0a94bcdfee2c6c57be57](https://user-images.githubusercontent.com/73578518/129474042-06498c2b-46ee-4b48-b240-58c45eaee250.png)
 
-![img](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\e356e9fceba8b6f7f7b13e0eae43ab07.png)
+![e356e9fceba8b6f7f7b13e0eae43ab07](https://user-images.githubusercontent.com/73578518/129474044-eab273ee-2e67-4f7e-b76d-5f3d95d08fb3.png)
 
-![img](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\img_1430(20210814-001424).jpg)
+![img_1430(20210814-001424)](https://user-images.githubusercontent.com/73578518/129474048-1c9ef4fb-dcdd-4536-8a3a-b6d4547a51ca.jpg)
 
-![image-20210815171043583](D:\Workspace\JavaLearningWorkspace\SimpleANN\arts\readme.assets\image-20210815171043583.png)
+![image-20210815171043583](https://user-images.githubusercontent.com/73578518/129474049-91abc905-dd78-48e0-bbac-aa5e083051e7.png)
 
